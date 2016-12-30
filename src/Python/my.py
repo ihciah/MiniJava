@@ -6,7 +6,7 @@ from MiniJavaListener import MiniJavaListener
 
 
 def main():
-    input = FileStream("binarysearch.java")
+    input = FileStream("factorial.java")
     lexer = MiniJavaLexer(input)
     stream = CommonTokenStream(lexer)
     parser = MiniJavaParser(stream)
