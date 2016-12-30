@@ -1,0 +1,1 @@
+(mainClass class (name (identifier Factorial)) (mainmethodleaf { public static void main ( String [ ] (paramfomain (identifier a)) ) { (statement System . out . println ( (expression (andExpr (lessExpr (addExpr (multiplyExpr (notExpr (newarrayExpr (newExpr (newExpr new (identifier Fac) ( )) . (name (identifier ComputeFac)) ( (args (special (integer 10))) ))))))))) ) ;) } }))
