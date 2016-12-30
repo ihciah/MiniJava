@@ -2,6 +2,8 @@ from antlr4 import FileStream, CommonTokenStream, tree
 from MiniJavaLexer import MiniJavaLexer
 from MiniJavaParser import MiniJavaParser
 from MiniJavaVisitor import MiniJavaVisitor
+import sys
+
 
 
 def ScopeCheck(mytree, active_vars=list()):
@@ -36,7 +38,9 @@ def visit():
     pass
 
 def main():
-    input = FileStream("factorial.java")
+    if len(sys.argv) != 2:
+        print "Usage: python %s minijava_demo.java"
+    input = FileStream(sys.argv[1])
     lexer = MiniJavaLexer(input)
     stream = CommonTokenStream(lexer)
     parser = MiniJavaParser(stream)
