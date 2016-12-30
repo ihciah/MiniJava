@@ -150,6 +150,11 @@ class MiniJavaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniJavaParser#divExpression.
+    def visitDivExpression(self, ctx):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniJavaParser#booleanLitExpression.
     def visitBooleanLitExpression(self, ctx):
         return self.visitChildren(ctx)
@@ -192,11 +197,6 @@ class MiniJavaVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MiniJavaParser#negExpression.
     def visitNegExpression(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniJavaParser#subExpression.
-    def visitSubExpression(self, ctx):
         return self.visitChildren(ctx)
 
 

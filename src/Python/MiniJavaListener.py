@@ -265,6 +265,15 @@ class MiniJavaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniJavaParser#divExpression.
+    def enterDivExpression(self, ctx):
+        pass
+
+    # Exit a parse tree produced by MiniJavaParser#divExpression.
+    def exitDivExpression(self, ctx):
+        pass
+
+
     # Enter a parse tree produced by MiniJavaParser#booleanLitExpression.
     def enterBooleanLitExpression(self, ctx):
         pass
@@ -343,15 +352,6 @@ class MiniJavaListener(ParseTreeListener):
 
     # Exit a parse tree produced by MiniJavaParser#negExpression.
     def exitNegExpression(self, ctx):
-        pass
-
-
-    # Enter a parse tree produced by MiniJavaParser#subExpression.
-    def enterSubExpression(self, ctx):
-        pass
-
-    # Exit a parse tree produced by MiniJavaParser#subExpression.
-    def exitSubExpression(self, ctx):
         pass
 
 

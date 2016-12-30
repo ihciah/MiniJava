@@ -122,7 +122,7 @@ class BS{
 
     // Initialize the integer array
     public int Init(int sz){
-	int j ;
+	//int j ;
 	int k ;
 	int aux02 ;
 	int aux01 ;

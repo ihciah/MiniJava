@@ -10,7 +10,7 @@ def ScopeCheck(mytree, active_vars=list()):
     local_vars = list()
     for node in mytree.children:
         # print str(type(node))
-        if isinstance(node, MiniJavaParser.VarDeclarationContext):
+        if isinstance(node, MiniJavaParser.VarDeclarationContext) or isinstance(node, MiniJavaParser.FieldDeclarationContext):
             name = node.children[1]
             local_vars.append(str(name))
         ExpressionCheck(node, active_vars + local_vars)

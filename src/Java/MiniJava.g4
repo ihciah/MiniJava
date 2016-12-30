@@ -120,12 +120,14 @@ expression
     # arrayInstantiationExpression
     |   'new' ID '(' ')'
     # objectInstantiationExpression
+    |   expression '*'  expression
+    # mulExpression
+    |   expression '/'  expression
+    # divExpression
     |   expression '+'  expression
     # addExpression
     |   expression '-'  expression
     # subExpression
-    |   expression '*'  expression
-    # mulExpression
     |   expression '<'  expression
     # ltExpression
     |   expression '&&' expression

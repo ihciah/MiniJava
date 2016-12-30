@@ -325,6 +325,18 @@ public interface MiniJavaListener extends ParseTreeListener {
 	 */
 	void exitNotExpression(MiniJavaParser.NotExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code divExpression}
+	 * labeled alternative in {@link MiniJavaParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterDivExpression(MiniJavaParser.DivExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code divExpression}
+	 * labeled alternative in {@link MiniJavaParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitDivExpression(MiniJavaParser.DivExpressionContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code booleanLitExpression}
 	 * labeled alternative in {@link MiniJavaParser#expression}.
 	 * @param ctx the parse tree
