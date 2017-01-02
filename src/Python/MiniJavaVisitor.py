@@ -200,6 +200,11 @@ class MiniJavaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniJavaParser#subExpression.
+    def visitSubExpression(self, ctx):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniJavaParser#mulExpression.
     def visitMulExpression(self, ctx):
         return self.visitChildren(ctx)

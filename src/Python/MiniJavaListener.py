@@ -355,6 +355,15 @@ class MiniJavaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniJavaParser#subExpression.
+    def enterSubExpression(self, ctx):
+        pass
+
+    # Exit a parse tree produced by MiniJavaParser#subExpression.
+    def exitSubExpression(self, ctx):
+        pass
+
+
     # Enter a parse tree produced by MiniJavaParser#mulExpression.
     def enterMulExpression(self, ctx):
         pass

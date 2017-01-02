@@ -2071,6 +2071,34 @@ class MiniJavaParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class SubExpressionContext(ExpressionContext):
+
+        def __init__(self, parser, ctx): # actually a MiniJavaParser.ExpressionContext)
+            super(MiniJavaParser.SubExpressionContext, self).__init__(parser)
+            self.copyFrom(ctx)
+
+        def expression(self, i=None):
+            if i is None:
+                return self.getTypedRuleContexts(MiniJavaParser.ExpressionContext)
+            else:
+                return self.getTypedRuleContext(MiniJavaParser.ExpressionContext,i)
+
+
+        def enterRule(self, listener):
+            if hasattr(listener, "enterSubExpression"):
+                listener.enterSubExpression(self)
+
+        def exitRule(self, listener):
+            if hasattr(listener, "exitSubExpression"):
+                listener.exitSubExpression(self)
+
+        def accept(self, visitor):
+            if hasattr(visitor, "visitSubExpression"):
+                return visitor.visitSubExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class MulExpressionContext(ExpressionContext):
 
         def __init__(self, parser, ctx): # actually a MiniJavaParser.ExpressionContext)
@@ -2260,7 +2288,7 @@ class MiniJavaParser ( Parser ):
                         pass
 
                     elif la_ == 4:
-                        localctx = MiniJavaParser.DivExpressionContext(self, MiniJavaParser.ExpressionContext(self, _parentctx, _parentState))
+                        localctx = MiniJavaParser.SubExpressionContext(self, MiniJavaParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
                         self.state = 261
                         if not self.precpred(self._ctx, 8):
