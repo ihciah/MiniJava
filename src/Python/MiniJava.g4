@@ -127,7 +127,7 @@ expression
     |   expression '+'  expression
     # addExpression
     |   expression '-'  expression
-    # divExpression
+    # subExpression
     |   expression '<'  expression
     # ltExpression
     |   expression '&&' expression
