@@ -1,8 +1,8 @@
-# MiniJava Project
+﻿# MiniJava Project
 
 #### 小组成员
 - ihciah 13307130364 : 代码、文档
-- chengshuo 13307130235 :
+- fishtorres 13307130235 :代码、文档
 
 #### 代码运行
 - Java部分(分析生成语法树，并展示为图片和文件)：
